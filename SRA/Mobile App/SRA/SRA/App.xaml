@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SRA.App">
+    <Application.Resources>
+        <Style TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="DarkRed"></Setter>
+            <Setter Property="BarTextColor" Value="White"></Setter>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="Black"></Setter>
+            <Setter Property="VerticalOptions" Value="Center"></Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="DarkRed"></Setter>
+            <Setter Property="TextColor" Value="White"></Setter>
+            <Setter Property="CornerRadius" Value="20"></Setter>
+            <Setter Property="Padding" Value="5"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

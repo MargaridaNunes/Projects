@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SRA.View.Login"
+             Title="SRA - Sistema de Recolha de Assiduidade"
+             BackgroundColor="White">
+    
+    <StackLayout>
+        <Image Source="SRA.jpg"></Image>
+        <StackLayout Padding="50,0,50,0" BackgroundColor="White">
+            <Entry Placeholder="email" HorizontalOptions="FillAndExpand" TextChanged="OnChangeEmail"></Entry>
+            <Entry Placeholder="password" IsPassword="True" HorizontalOptions="FillAndExpand" TextChanged="OnChangePassword"></Entry>
+        </StackLayout>
+        <Button Text="LogIn" HorizontalOptions="Center" Command="{Binding LoginCommand}"></Button>
+    </StackLayout>
+</ContentPage>

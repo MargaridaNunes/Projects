@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:SRA.Resx;assembly=SRA"
+             x:Class="SRA.View.RolesPage"
+             Title="SRA - Sistema de Recolha de Assiduidade"
+             BackgroundColor="White">
+    
+    <StackLayout Padding="0,0,0,10">
+        <Label Text="{x:Static resources:AppResources.RolesPageTitle}"  FontSize="Title" FontAttributes="Bold" HorizontalOptions="Center" Padding="0, 20, 0, 30"></Label>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Frame BorderColor="Black" BackgroundColor="LightGray" HeightRequest="160" WidthRequest="160" CornerRadius="10" HasShadow="True">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding StudentPageCommand}"></TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                <StackLayout>
+                    <Image Source="Student_icon.jpg" HeightRequest="120"></Image> 
+                    <Label Text="{x:Static resources:AppResources.StudentUser}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                </StackLayout>
+            </Frame>
+            <Frame BorderColor="Black" BackgroundColor="LightGray" HeightRequest="160" WidthRequest="160" CornerRadius="10" HasShadow="True" VerticalOptions="Center" >
+                <StackLayout>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CollectorPageCommand}"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="User_icon.png" HeightRequest="120"></Image> 
+                    <Label Text="{x:Static resources:AppResources.CollectorUser}" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        <StackLayout Padding="0,20,0,10">
+           <Button Text="{x:Static resources:AppResources.Logout}" HorizontalOptions="Center" Command="{Binding LogoutCommand}"></Button> 
+        </StackLayout>
+        
+    </StackLayout>
+    
+</ContentPage>

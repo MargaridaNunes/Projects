@@ -1,0 +1,236 @@
+#seasonsDiv {
+ width: 18%;
+ float: left;
+ padding : 10px;
+
+ height: 700px;
+ margin: 0em;
+ overflow-y: auto;
+}
+
+#programmesDiv {
+ width: 18%;
+ float: left;
+ padding : 10px;
+ 
+ height: 700px;
+ margin: 0em;
+ overflow-y: auto;
+
+}
+
+#classesDiv{
+    width: 18%;
+    float: left; 
+    padding : 10px;
+ 
+    height: 700px;
+    margin: 0em;
+    overflow-y: auto;
+}
+
+#coursesDiv {
+    width: 18%;
+    float: left; 
+    padding : 10px;
+ 
+    height: 700px;
+    margin: 0em;
+    overflow-y: auto;
+}
+
+#courseDetailsDiv {
+    width: 18%;
+    float: left; 
+    padding : 10px;
+ 
+    height: 700px;
+    margin: 0em;
+    overflow-y: auto;
+}
+
+#collectionsDiv {
+    width: 70%;
+    float: left;
+    padding: 30px;
+    height: 900px;
+    overflow-y: auto;
+}
+
+#collectionsDivCenter{
+    height: 900px;
+    overflow-y: auto;
+}
+
+#collectionDetailDiv {
+    float: right;
+    padding-right: 30px;
+    padding-top: 15px;
+}
+
+#homePageImage{
+    position:absolute;
+    top:15%;
+    left:40%;
+}
+
+#adminHomePageCard{
+    position:absolute;
+    top:50%;
+    left:32%;
+    
+}
+
+#homePageCard{
+    position:absolute;
+    top:50%;
+    left:11%;
+}
+
+#collectionsNotAssignDiv{
+    float: left;
+    padding-top: 20px;
+    padding-left: 50px;
+    height: 900px;
+    overflow-y: auto;
+}
+
+#collectorsDiv{
+    float: right;
+    width: 70%;
+    padding-right: 50px;
+}
+
+#collectorsRouteDiv{
+    float: right;
+    width: 70%;
+    padding-right: 150px;
+    padding-top: 40px;
+}
+
+#collectorsSearchDiv{
+    float: right;
+}
+
+#collectorsHeaderDiv{
+    padding-bottom: 20px;
+}
+
+#collectoresSearchBoxIcon{
+    position:absolute;
+    top:20%;
+    left:90%;
+}
+
+#automaticButtonDiv{
+    padding-left: 50px;
+}
+
+#numberOfPersonsInput{
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#numberOfPersonsCard{
+    width: 35%;
+    position:absolute;
+    top:60px;
+    left:40%;
+}
+
+#numberOfPersonsCardWithMessage{
+    width: 35%;
+    position:absolute;
+    top:140px;
+    left:40%;
+}
+
+#routeCards{
+    position:absolute;
+    top: 20%;
+    left:30%;
+}
+
+#reduceRouteCards{
+    float: right;
+    width: 15%;
+    padding-right: 50px;
+    padding-right: 25px;
+}
+
+#usersList{
+    float: left;
+    padding-top: 20px;
+    padding-left: 50px;
+    height: 900px;
+    overflow-y: auto;
+}
+
+#assignUsersSearchBox{
+    padding-left: 50px;
+    padding-bottom: 10px;
+}
+
+#usersRolesCards{
+    width: 70%;
+    position:absolute;
+    top:11%;
+    left:35%;
+}
+
+#createUsersCard{
+    position:absolute;
+    top:25%;
+    left:12%;
+}
+
+#createUserPageMessage{
+    width: 35%;
+    position:absolute;
+    top:10%;
+    left:32%;
+}
+
+#noStudentNumberMessage{
+    width: 60%;
+    padding-bottom: 20px;
+}
+
+#lecturesTable{
+    float: left;
+    width: 70%;
+    padding-left :50px;
+}
+
+#attendancesTable{
+    float: right;
+    width: 25%;
+    padding-right :50px;
+    padding-top: 10px;
+}
+
+#attendanceTableHeader{
+    float: left;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#LoginErrorMessage{
+    width: 40%;
+    padding-top: 30px;
+}
+
+#lecturesDiv {
+    float: left;
+    padding : 10px;
+    height: 900px;
+    margin: 0em;
+    overflow-y: auto;
+}
+
+#lecturesDivCenter {
+    padding : 10px;
+    height: 900px;
+    margin: 0em;
+    overflow-y: auto;
+}

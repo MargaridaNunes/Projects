@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:SRA.Resx;assembly=SRA"
+             xmlns:scroll="clr-namespace:Xamarin.Forms.Extended;assembly=Xamarin.Forms.Extended.InfiniteScrolling"
+             x:Class="SRA.View.StudentAttendanceHistory"
+             Title="SRA - Sistema de Recolha de Assiduidade"
+             BackgroundColor="White">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="ToolbarItem" IconImageSource="User_icon.png" Command="{Binding RolesCommand}"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout>
+        <SearchBar x:Name="SearchBar" HeightRequest="50" TextColor="Gray" 
+                   Placeholder="{x:Static resources:AppResources.SearchBarText}"
+                   SearchCommand="{Binding SearchCommand}" 
+                   SearchCommandParameter="{Binding Text, Source={x:Reference SearchBar}}">
+        </SearchBar>
+        <ListView ItemsSource="{Binding StudentLectures}" BackgroundColor="White"
+                  IsPullToRefreshEnabled="True" RefreshCommand="{Binding RefreshCommand}" IsRefreshing="{Binding IsRefreshing}"
+                  SelectedItem="{Binding SelectedRegistry, Mode=TwoWay}" ItemSelected="Registry_OnItemSelected">
+            <ListView.Behaviors>
+                <scroll:InfiniteScrollBehavior IsLoadingMore="{Binding LoadingItems}"></scroll:InfiniteScrollBehavior>
+            </ListView.Behaviors>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding CourseName}" TextColor="Black" Detail="{Binding RegistryDate}"></TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout IsVisible="{Binding ImageVisibility}" VerticalOptions="Center" Padding="0,0,0,130">
+            <Image Source="noResults.png"></Image>
+            <Label Text="{x:Static resources:AppResources.AttendanceHistoryEmptyMessage}" 
+                   HorizontalOptions="Center" FontAttributes="Bold" TextColor="Gray"></Label>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

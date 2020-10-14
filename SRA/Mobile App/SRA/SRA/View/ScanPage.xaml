@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
+             xmlns:resources="clr-namespace:SRA.Resx;assembly=SRA"
+             x:Class="SRA.View.ScanPage"
+             Title="SRA - Sistema de Recolha de Assiduidade">
+    
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <forms:ZXingScannerView x:Name="ZxingScannerView" 
+                                HorizontalOptions="FillAndExpand" 
+                                VerticalOptions="FillAndExpand"
+                                IsScanning="{Binding IsScanning}" 
+                                IsAnalyzing="{Binding IsAnalyzing}"
+                                Result="{Binding Result, Mode=TwoWay}" 
+                                ScanResultCommand="{Binding ScanCommand}">
+        </forms:ZXingScannerView>
+        <forms:ZXingDefaultOverlay x:Name="ZXingDefaultOverlay" 
+                                   TopText="{x:Static resources:AppResources.ScanTopText}"
+                                   BottomText="{x:Static resources:AppResources.ScanBottomText}">
+        </forms:ZXingDefaultOverlay>
+    </Grid>
+    
+</ContentPage>

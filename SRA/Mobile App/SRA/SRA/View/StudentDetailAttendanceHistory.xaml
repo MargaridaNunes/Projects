@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:SRA.Resx;assembly=SRA"
+             x:Class="SRA.View.StudentDetailAttendanceHistory"
+             Title="SRA - Sistema de Recolha de Assiduidade"
+             BackgroundColor="White">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="ToolbarItem" IconImageSource="User_icon.png" Command="{Binding RolesCommand}"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <TableView BindingContext="{Binding StudentLecture}" BackgroundColor="White">
+        <TableRoot>
+            <TableSection Title="{x:Static resources:AppResources.StudentTableSectionTitle}" TextColor="DimGray">
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="{x:Static resources:AppResources.CourseNameLabel}" FontAttributes="Bold"></Label>
+                        <Label Text="{Binding CourseName}" HorizontalOptions="EndAndExpand" ></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="{x:Static resources:AppResources.RegistryDateLabel}" FontAttributes="Bold"></Label>
+                        <Label Text="{Binding RegistryDate}" HorizontalOptions="EndAndExpand"></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="{x:Static resources:AppResources.ClassLabel}" FontAttributes="Bold"></Label>
+                        <Label Text="{Binding ClassId}" HorizontalOptions="EndAndExpand"></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="{x:Static resources:AppResources.ClassroomLabel}" FontAttributes="Bold"></Label>
+                        <Label Text="{Binding Classroom}" HorizontalOptions="EndAndExpand"></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="{x:Static resources:AppResources.SemesterRepresentLabel}" FontAttributes="Bold"></Label>
+                        <Label Text="{Binding SemesterRepresent}" HorizontalOptions="EndAndExpand"></Label>
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="10">
+                        <Label Text="{x:Static resources:AppResources.TeacherNameLabel}" FontAttributes="Bold"></Label>
+                        <Label Text="{Binding TeacherName}" HorizontalOptions="EndAndExpand"></Label>
+                    </StackLayout>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
